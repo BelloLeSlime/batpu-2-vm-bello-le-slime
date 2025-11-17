@@ -1,0 +1,349 @@
+[gd_scene load_steps=8 format=3 uid="uid://hmtu2ragwl4q"]
+
+[ext_resource type="Script" uid="uid://b7bk8o3sx3vq3" path="res://scripts/ui.gd" id="1_wm3ai"]
+[ext_resource type="Texture2D" uid="uid://cyf47dsspb53c" path="res://assets/textures/oak_planks.png" id="1_yev5y"]
+[ext_resource type="FontFile" uid="uid://bu8eeswae3m7p" path="res://assets/fonts/Minecraft.ttf" id="2_gdt2y"]
+[ext_resource type="Script" uid="uid://bd13121ka3wm2" path="res://scripts/step.gd" id="3_gdt2y"]
+[ext_resource type="Texture2D" uid="uid://cm7xmsa7yyabo" path="res://assets/textures/redstone_lamp.png" id="3_wm3ai"]
+[ext_resource type="Texture2D" uid="uid://c7qrqfnb2lp75" path="res://assets/textures/oak_planks_clicked.png" id="4_8dubc"]
+[ext_resource type="Script" uid="uid://74csggi05okm" path="res://scripts/data.gd" id="7_p7vwb"]
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_wm3ai")
+
+[node name="Start" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 785.0
+offset_top = 27.0
+offset_right = 800.0
+offset_bottom = 35.0
+scale = Vector2(17, 17)
+texture_normal = ExtResource("1_yev5y")
+texture_pressed = ExtResource("1_yev5y")
+ignore_texture_size = true
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="Start"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 0.5
+offset_top = 2.0
+offset_right = 55.5
+offset_bottom = 18.0
+scale = Vector2(0.25, 0.25)
+theme_override_fonts/font = ExtResource("2_gdt2y")
+text = "START"
+horizontal_alignment = 1
+
+[node name="Import" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 1655.0
+offset_top = 26.0
+offset_right = 1670.0
+offset_bottom = 34.0
+scale = Vector2(16, 16)
+texture_normal = ExtResource("1_yev5y")
+texture_pressed = ExtResource("4_8dubc")
+ignore_texture_size = true
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="Import"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 0.05882263
+offset_top = 2.0588236
+offset_right = 65.05882
+offset_bottom = 18.058823
+scale = Vector2(0.23, 0.23)
+theme_override_fonts/font = ExtResource("2_gdt2y")
+theme_override_font_sizes/font_size = 16
+text = "IMPORT"
+horizontal_alignment = 1
+
+[node name="Export" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 1376.0
+offset_top = 27.0
+offset_right = 1391.0
+offset_bottom = 35.0
+scale = Vector2(16, 16)
+texture_normal = ExtResource("1_yev5y")
+texture_pressed = ExtResource("4_8dubc")
+ignore_texture_size = true
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="Export"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 0.0625
+offset_top = 2.375
+offset_right = 70.0625
+offset_bottom = 18.375
+scale = Vector2(0.21, 0.21)
+theme_override_fonts/font = ExtResource("2_gdt2y")
+theme_override_font_sizes/font_size = 16
+text = "EXPORT"
+horizontal_alignment = 1
+
+[node name="Step" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 787.0
+offset_top = 174.0
+offset_right = 802.0
+offset_bottom = 182.0
+scale = Vector2(8, 8)
+texture_normal = ExtResource("1_yev5y")
+texture_pressed = ExtResource("4_8dubc")
+ignore_texture_size = true
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="Step"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 0.5
+offset_top = 2.0
+offset_right = 55.5
+offset_bottom = 18.0
+scale = Vector2(0.25, 0.25)
+theme_override_fonts/font = ExtResource("2_gdt2y")
+text = "STEP"
+horizontal_alignment = 1
+
+[node name="Reset" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 920.0
+offset_top = 174.0
+offset_right = 935.0
+offset_bottom = 182.0
+scale = Vector2(8, 8)
+texture_normal = ExtResource("1_yev5y")
+texture_pressed = ExtResource("4_8dubc")
+ignore_texture_size = true
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="Reset"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 0.5
+offset_top = 2.0
+offset_right = 56.5
+offset_bottom = 18.0
+scale = Vector2(0.25, 0.25)
+theme_override_fonts/font = ExtResource("2_gdt2y")
+text = "RESET"
+horizontal_alignment = 1
+
+[node name="STEP" type="Node2D" parent="."]
+position = Vector2(-394, -125)
+scale = Vector2(1.5, 1.5)
+script = ExtResource("3_gdt2y")
+
+[node name="BIT1" type="Sprite2D" parent="STEP"]
+texture_filter = 1
+position = Vector2(795, 261)
+texture = ExtResource("3_wm3ai")
+
+[node name="BIT2" type="Sprite2D" parent="STEP"]
+texture_filter = 1
+position = Vector2(812, 261)
+texture = ExtResource("3_wm3ai")
+
+[node name="BIT3" type="Sprite2D" parent="STEP"]
+texture_filter = 1
+position = Vector2(829, 261)
+texture = ExtResource("3_wm3ai")
+
+[node name="BIT4" type="Sprite2D" parent="STEP"]
+texture_filter = 1
+position = Vector2(846, 261)
+texture = ExtResource("3_wm3ai")
+
+[node name="BIT5" type="Sprite2D" parent="STEP"]
+texture_filter = 1
+position = Vector2(863, 261)
+texture = ExtResource("3_wm3ai")
+
+[node name="BIT6" type="Sprite2D" parent="STEP"]
+texture_filter = 1
+position = Vector2(880, 261)
+texture = ExtResource("3_wm3ai")
+
+[node name="BIT7" type="Sprite2D" parent="STEP"]
+texture_filter = 1
+position = Vector2(897, 261)
+texture = ExtResource("3_wm3ai")
+
+[node name="BIT8" type="Sprite2D" parent="STEP"]
+texture_filter = 1
+position = Vector2(914, 261)
+texture = ExtResource("3_wm3ai")
+
+[node name="BIT9" type="Sprite2D" parent="STEP"]
+texture_filter = 1
+position = Vector2(931, 261)
+texture = ExtResource("3_wm3ai")
+
+[node name="BIT10" type="Sprite2D" parent="STEP"]
+texture_filter = 1
+position = Vector2(948, 261)
+texture = ExtResource("3_wm3ai")
+
+[node name="Label" type="Label" parent="STEP"]
+texture_filter = 1
+offset_left = 787.3333
+offset_top = 248.66669
+offset_right = 961.3333
+offset_bottom = 280.6667
+theme_override_fonts/font = ExtResource("2_gdt2y")
+theme_override_font_sizes/font_size = 32
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Code" type="TextEdit" parent="."]
+offset_left = 1070.0
+offset_top = 173.0
+offset_right = 1896.0
+offset_bottom = 920.0
+theme_override_fonts/font = ExtResource("2_gdt2y")
+theme_override_font_sizes/font_size = 32
+placeholder_text = "No code here. Import some or edit a new one !"
+
+[node name="Name" type="TextEdit" parent="."]
+texture_filter = 1
+offset_left = 1070.0
+offset_top = 27.0
+offset_right = 1346.0
+offset_bottom = 155.0
+theme_override_fonts/font = ExtResource("2_gdt2y")
+theme_override_font_sizes/font_size = 32
+placeholder_text = "Name"
+
+[node name="AsFileDialog" type="FileDialog" parent="."]
+title = "Open a File"
+ok_button_text = "Import"
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.as")
+
+[node name="RegFile" type="Label" parent="."]
+texture_filter = 1
+offset_left = 794.0
+offset_top = 290.0
+offset_right = 1034.0
+offset_bottom = 363.0
+theme_override_fonts/font = ExtResource("2_gdt2y")
+text = "r00 : 0   r01 : 0   r02 : 0   r03 : 0
+r04 : 0   r05 : 0  r06 : 0   r07 : 0
+r08 : 0   r09 : 0   r10 : 0   r11 : 0
+r12 : 0   r13 : 0   r14 : 0   r15 : 0"
+
+[node name="Data" type="ScrollContainer" parent="."]
+offset_left = 752.0
+offset_top = 381.0
+offset_right = 1063.0
+offset_bottom = 931.0
+script = ExtResource("7_p7vwb")
+
+[node name="Label" type="Label" parent="Data"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_gdt2y")
+text = "d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0
+d000 : 0 | d001 : 0 | d 002 : 0 | d003 : 0"
+
+[node name="SpeedScrollBar" type="VScrollBar" parent="."]
+offset_left = 684.0
+offset_top = 180.0
+offset_right = 722.0
+offset_bottom = 909.0
+min_value = 1.0
+max_value = 100000.0
+value = 100.0
+exp_edit = true
+
+[node name="Speed" type="Label" parent="."]
+texture_filter = 1
+offset_left = 550.0
+offset_top = 22.0
+offset_right = 770.0
+offset_bottom = 153.0
+theme_override_fonts/font = ExtResource("2_gdt2y")
+theme_override_font_sizes/font_size = 64
+text = "100
+ips"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Import" to="." method="_on_import_pressed"]
+[connection signal="pressed" from="Export" to="." method="_on_export_pressed"]

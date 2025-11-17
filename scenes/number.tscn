@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://qisitopkn1yt"]
+
+[ext_resource type="FontFile" uid="uid://bu8eeswae3m7p" path="res://assets/fonts/Minecraft.ttf" id="1_1u5is"]
+
+[node name="Number" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("1_1u5is")
+theme_override_font_sizes/font_size = 50
+text = " ---"

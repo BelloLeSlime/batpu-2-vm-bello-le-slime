@@ -1,0 +1,464 @@
+[gd_scene load_steps=9 format=3 uid="uid://d1lo1rxiplden"]
+
+[ext_resource type="Texture2D" uid="uid://5rm88vhwmqlc" path="res://assets/textures/light_gray_wool.png" id="1_kbhpp"]
+[ext_resource type="Texture2D" uid="uid://dncsj4rwqngp1" path="res://assets/textures/gray_wool.png" id="2_742vw"]
+[ext_resource type="Texture2D" uid="uid://b717jkbj70w52" path="res://assets/textures/black_wool.png" id="3_b2sql"]
+[ext_resource type="Texture2D" uid="uid://dbjuf5rc1cf8e" path="res://assets/textures/white_wool.png" id="4_2wvs2"]
+[ext_resource type="Texture2D" uid="uid://b88sbyqu2qoa7" path="res://assets/textures/red_wool.png" id="5_yq5jm"]
+[ext_resource type="Texture2D" uid="uid://clih4ubi6b75q" path="res://assets/textures/stone.png" id="6_glqhp"]
+[ext_resource type="Texture2D" uid="uid://cyf47dsspb53c" path="res://assets/textures/oak_planks.png" id="7_dxac8"]
+[ext_resource type="FontFile" uid="uid://bu8eeswae3m7p" path="res://assets/fonts/Minecraft.ttf" id="8_iibji"]
+
+[node name="Controller" type="Node2D"]
+
+[node name="Apparence" type="Node2D" parent="."]
+scale = Vector2(0.45, 0.45)
+
+[node name="Sprites" type="Node2D" parent="Apparence"]
+scale = Vector2(4, 4)
+
+[node name="Sprite2D" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+texture = ExtResource("1_kbhpp")
+
+[node name="Sprite2D13" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(0, 16)
+texture = ExtResource("1_kbhpp")
+
+[node name="Sprite2D14" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(0, 32)
+texture = ExtResource("1_kbhpp")
+
+[node name="Sprite2D15" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(0, 48)
+texture = ExtResource("1_kbhpp")
+
+[node name="Sprite2D28" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(176, 16)
+texture = ExtResource("1_kbhpp")
+
+[node name="Sprite2D29" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(176, 32)
+texture = ExtResource("1_kbhpp")
+
+[node name="Sprite2D30" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(176, 48)
+texture = ExtResource("1_kbhpp")
+
+[node name="Sprite2D16" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(0, 64)
+texture = ExtResource("1_kbhpp")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(16, 0)
+texture = ExtResource("1_kbhpp")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(32, 0)
+texture = ExtResource("1_kbhpp")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(48, 0)
+texture = ExtResource("1_kbhpp")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(64, 0)
+texture = ExtResource("1_kbhpp")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(80, 0)
+texture = ExtResource("1_kbhpp")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(96, 0)
+texture = ExtResource("1_kbhpp")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(112, 0)
+texture = ExtResource("1_kbhpp")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(128, 0)
+texture = ExtResource("1_kbhpp")
+
+[node name="Sprite2D10" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(144, 0)
+texture = ExtResource("1_kbhpp")
+
+[node name="Sprite2D11" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(160, 0)
+texture = ExtResource("1_kbhpp")
+
+[node name="Sprite2D12" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(176, 0)
+texture = ExtResource("1_kbhpp")
+
+[node name="Sprite2D17" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(16, 64)
+texture = ExtResource("1_kbhpp")
+
+[node name="Sprite2D18" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(32, 64)
+texture = ExtResource("1_kbhpp")
+
+[node name="Sprite2D19" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(48, 64)
+texture = ExtResource("1_kbhpp")
+
+[node name="Sprite2D20" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(64, 64)
+texture = ExtResource("1_kbhpp")
+
+[node name="Sprite2D21" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(80, 64)
+texture = ExtResource("1_kbhpp")
+
+[node name="Sprite2D22" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(96, 64)
+texture = ExtResource("1_kbhpp")
+
+[node name="Sprite2D23" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(112, 64)
+texture = ExtResource("1_kbhpp")
+
+[node name="Sprite2D24" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(128, 64)
+texture = ExtResource("1_kbhpp")
+
+[node name="Sprite2D25" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(144, 64)
+texture = ExtResource("1_kbhpp")
+
+[node name="Sprite2D26" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(160, 64)
+texture = ExtResource("1_kbhpp")
+
+[node name="Sprite2D31" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(16, 48)
+texture = ExtResource("2_742vw")
+
+[node name="Sprite2D32" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(32, 48)
+texture = ExtResource("3_b2sql")
+
+[node name="Sprite2D33" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(48, 48)
+texture = ExtResource("2_742vw")
+
+[node name="Sprite2D34" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(64, 48)
+texture = ExtResource("2_742vw")
+
+[node name="Sprite2D35" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(80, 48)
+texture = ExtResource("2_742vw")
+
+[node name="Sprite2D36" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(96, 48)
+texture = ExtResource("2_742vw")
+
+[node name="Sprite2D37" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(112, 48)
+texture = ExtResource("2_742vw")
+
+[node name="Sprite2D38" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(128, 48)
+texture = ExtResource("2_742vw")
+
+[node name="Sprite2D39" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(144, 48)
+texture = ExtResource("2_742vw")
+
+[node name="Sprite2D40" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(160, 48)
+texture = ExtResource("2_742vw")
+
+[node name="Sprite2D41" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(16, 32)
+texture = ExtResource("3_b2sql")
+
+[node name="Sprite2D42" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(32, 32)
+texture = ExtResource("3_b2sql")
+
+[node name="Sprite2D43" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(48, 32)
+texture = ExtResource("3_b2sql")
+
+[node name="Sprite2D44" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(64, 32)
+texture = ExtResource("2_742vw")
+
+[node name="Sprite2D45" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(80, 32)
+texture = ExtResource("2_742vw")
+
+[node name="Sprite2D46" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(96, 32)
+texture = ExtResource("4_2wvs2")
+
+[node name="Sprite2D47" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(112, 32)
+texture = ExtResource("4_2wvs2")
+
+[node name="Sprite2D48" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(128, 32)
+texture = ExtResource("2_742vw")
+
+[node name="Sprite2D49" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(144, 32)
+texture = ExtResource("5_yq5jm")
+
+[node name="Sprite2D50" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(160, 32)
+texture = ExtResource("5_yq5jm")
+
+[node name="Sprite2D51" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(16, 16)
+texture = ExtResource("2_742vw")
+
+[node name="Sprite2D52" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(32, 16)
+texture = ExtResource("3_b2sql")
+
+[node name="Sprite2D61" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(32, 16)
+scale = Vector2(0.87500006, 0.87500006)
+texture = ExtResource("6_glqhp")
+region_enabled = true
+region_rect = Rect2(1, 1, 14, 14)
+
+[node name="Sprite2D69" type="Sprite2D" parent="Apparence/Sprites"]
+z_index = 1
+texture_filter = 1
+position = Vector2(96, 16)
+scale = Vector2(0.87500006, 0.87500006)
+texture = ExtResource("7_dxac8")
+region_enabled = true
+region_rect = Rect2(1, 1, 16, 10)
+
+[node name="Sprite2D70" type="Sprite2D" parent="Apparence/Sprites"]
+z_index = 1
+texture_filter = 1
+position = Vector2(112, 16)
+scale = Vector2(0.87500006, 0.87500006)
+texture = ExtResource("7_dxac8")
+region_enabled = true
+region_rect = Rect2(1, 1, 16, 10)
+
+[node name="Sprite2D71" type="Sprite2D" parent="Apparence/Sprites"]
+z_index = 1
+texture_filter = 1
+position = Vector2(144, 16)
+scale = Vector2(0.87500006, 0.87500006)
+texture = ExtResource("7_dxac8")
+region_enabled = true
+region_rect = Rect2(1, 1, 16, 10)
+
+[node name="Sprite2D72" type="Sprite2D" parent="Apparence/Sprites"]
+z_index = 1
+texture_filter = 1
+position = Vector2(160, 16)
+scale = Vector2(0.87500006, 0.87500006)
+texture = ExtResource("7_dxac8")
+region_enabled = true
+region_rect = Rect2(1, 1, 16, 10)
+
+[node name="Sprite2D62" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(48, 32)
+scale = Vector2(0.87500006, 0.87500006)
+texture = ExtResource("6_glqhp")
+region_enabled = true
+region_rect = Rect2(1, 1, 14, 14)
+
+[node name="Sprite2D65" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(96, 32)
+scale = Vector2(0.87500006, 0.87500006)
+texture = ExtResource("6_glqhp")
+region_enabled = true
+region_rect = Rect2(1, 1, 8, 4)
+
+[node name="Sprite2D66" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(112, 32)
+scale = Vector2(0.87500006, 0.87500006)
+texture = ExtResource("6_glqhp")
+region_enabled = true
+region_rect = Rect2(1, 1, 8, 4)
+
+[node name="Sprite2D67" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(144, 32)
+scale = Vector2(0.87500006, 0.87500006)
+texture = ExtResource("6_glqhp")
+region_enabled = true
+region_rect = Rect2(1, 1, 8, 4)
+
+[node name="Sprite2D68" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(160, 32)
+scale = Vector2(0.87500006, 0.87500006)
+texture = ExtResource("6_glqhp")
+region_enabled = true
+region_rect = Rect2(1, 1, 8, 4)
+
+[node name="Sprite2D63" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(32, 48)
+scale = Vector2(0.87500006, 0.87500006)
+texture = ExtResource("6_glqhp")
+region_enabled = true
+region_rect = Rect2(1, 1, 14, 14)
+
+[node name="Sprite2D64" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(16, 32)
+scale = Vector2(0.87500006, 0.87500006)
+texture = ExtResource("6_glqhp")
+region_enabled = true
+region_rect = Rect2(1, 1, 14, 14)
+
+[node name="Sprite2D53" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(48, 16)
+texture = ExtResource("2_742vw")
+
+[node name="Sprite2D54" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(64, 16)
+texture = ExtResource("2_742vw")
+
+[node name="Sprite2D55" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(80, 16)
+texture = ExtResource("2_742vw")
+
+[node name="Sprite2D56" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(96, 16)
+texture = ExtResource("2_742vw")
+
+[node name="Sprite2D57" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(112, 16)
+texture = ExtResource("2_742vw")
+
+[node name="Sprite2D58" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(128, 16)
+texture = ExtResource("2_742vw")
+
+[node name="Sprite2D59" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(144, 16)
+texture = ExtResource("2_742vw")
+
+[node name="Sprite2D60" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(160, 16)
+texture = ExtResource("2_742vw")
+
+[node name="Sprite2D27" type="Sprite2D" parent="Apparence/Sprites"]
+texture_filter = 1
+position = Vector2(176, 64)
+texture = ExtResource("1_kbhpp")
+
+[node name="Label" type="Label" parent="Apparence"]
+z_index = 1
+offset_left = 357.0
+offset_top = 57.0
+offset_right = 479.0
+offset_bottom = 88.0
+scale = Vector2(0.45, 0.45)
+theme_override_fonts/font = ExtResource("8_iibji")
+theme_override_font_sizes/font_size = 30
+text = "SELECT"
+
+[node name="Label2" type="Label" parent="Apparence"]
+z_index = 1
+offset_left = 421.0
+offset_top = 57.0
+offset_right = 543.0
+offset_bottom = 88.0
+scale = Vector2(0.45, 0.45)
+theme_override_fonts/font = ExtResource("8_iibji")
+theme_override_font_sizes/font_size = 30
+text = "START"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Apparence"]
+z_index = 1
+offset_left = 549.0
+offset_top = 56.0
+offset_right = 671.0
+offset_bottom = 87.0
+scale = Vector2(0.45, 0.45)
+theme_override_fonts/font = ExtResource("8_iibji")
+theme_override_font_sizes/font_size = 30
+text = "B"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Apparence"]
+z_index = 1
+offset_left = 612.00006
+offset_top = 56.0
+offset_right = 734.00006
+offset_bottom = 87.0
+scale = Vector2(0.45, 0.45)
+theme_override_fonts/font = ExtResource("8_iibji")
+theme_override_font_sizes/font_size = 30
+text = "A"
+horizontal_alignment = 1
