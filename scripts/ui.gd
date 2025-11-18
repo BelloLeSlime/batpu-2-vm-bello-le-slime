@@ -3,9 +3,49 @@ extends CanvasLayer
 @onready var import_button: TextureButton = $Import
 @onready var file_dialog: FileDialog = $AsFileDialog
 
+func format_registers():
+	var lines = []
+	for row in range(4):
+		var line = ""
+		for col in range(4):
+			var reg = row * 4 + col
+			var value = globals.register_file[reg]
+			line += "r%02d : %-3d   " % [reg, value]
+		lines.append(line)
+	return "\n".join(lines)
+
+func format_data_memory():
+	var lines = []
+	for row in range(64):
+		var line = ""
+		for col in range(4):
+			var dat = row * 4 + col
+			var value = globals.data_memory[dat]
+			line += "d%02d : %-3d" % [dat, value]
+			if not col == 3:
+				line += "| "
+		lines.append(line)
+	return "\n".join(lines)
+
 func _process(_delta):
 	$Speed.text = str(int($SpeedScrollBar.value)) + "\nips"
-
+	globals.speed = $SpeedScrollBar.value
+	$RegFile.text = format_registers()
+	$Data/Label.text = format_data_memory()
+	$STEP.step = globals.step
+	if not globals.running:
+		$Start/Label.text = "START"
+		$Code.editable = true
+		$Name.editable = true
+		$Import.disabled = false
+		$Export.disabled = false
+	else:
+		$Start/Label.text = "STOP"
+		$Code.editable = false
+		$Name.editable = false
+		$Import.disabled = true
+		$Export.disabled = true
+	
 func _ready() -> void:
 	file_dialog.file_selected.connect(Callable(self, "_on_file_selected"))
 
@@ -28,12 +68,10 @@ func _on_export_pressed() -> void:
 	var vb := VBoxContainer.new()
 	popup.add_child(vb)
 	
-	# Titre
 	var title = Label.new()
 	title.text = "Export As..."
 	vb.add_child(title)
 	
-	# Boutons export
 	var btn_as := Button.new()
 	btn_as.text = "Assembly File (.as)"
 	btn_as.pressed.connect(Callable(self, "_export_as"))
@@ -49,12 +87,12 @@ func _on_export_pressed() -> void:
 	btn_sch.pressed.connect(Callable(self, "_export_schem"))
 	vb.add_child(btn_sch)
 	
-	# Bouton Cancel
+
 	var btn_cancel := Button.new()
 	btn_cancel.text = "Cancel"
 	btn_cancel.pressed.connect(func():
-		popup.hide()  # cache la popup
-		popup.queue_free()  # supprime le node de la scène si besoin
+		popup.hide()
+		popup.queue_free()
 	)
 	vb.add_child(btn_cancel)
 	
@@ -78,15 +116,12 @@ func export_as():
 	fd.file_selected.connect(Callable(self, "_dir_selected"))
 	fd.popup_centered()
 
-# ----- Export .mc -----
 func _export_mc():
 	_export_with_python("mc")
 
-# ----- Export .schematic -----
 func _export_schem():
 	_export_with_python("schem")
 
-# ----- Fonction commune pour mc/schematic -----
 func _export_with_python(format: String):
 	var res = ProjectSettings.globalize_path("res://")
 	var program_name = $Name.text
@@ -141,3 +176,12 @@ func _export_with_python(format: String):
 			print("Generated file not found:", generated_path)
 )
 	fd.popup_centered()
+
+func _on_start_pressed() -> void:
+	if not globals.running:
+		globals.emit_signal("start")
+		globals.running = true
+		globals.machine_code = $Code.text
+	else:
+		globals.emit_signal("stop")
+		globals.running = false

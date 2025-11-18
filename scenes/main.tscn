@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://c0n2tbisyawc6"]
+[gd_scene load_steps=7 format=3 uid="uid://c0n2tbisyawc6"]
 
 [ext_resource type="PackedScene" uid="uid://b1vquqxpxsmar" path="res://scenes/screen.tscn" id="1_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://b761hi3y2lmkm" path="res://scenes/label.tscn" id="2_sugp2"]
 [ext_resource type="PackedScene" uid="uid://qisitopkn1yt" path="res://scenes/number.tscn" id="3_sugp2"]
 [ext_resource type="PackedScene" uid="uid://d1lo1rxiplden" path="res://scenes/controller.tscn" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://hmtu2ragwl4q" path="res://scenes/ui.tscn" id="5_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://oeu3gt26l63j" path="res://scenes/execute.tscn" id="6_tefeu"]
 
 [node name="Main" type="Node2D"]
 
@@ -21,3 +22,5 @@ position = Vector2(404, 8)
 position = Vector2(92, 704)
 
 [node name="UI" parent="." instance=ExtResource("5_tbgi4")]
+
+[node name="Execute" parent="." instance=ExtResource("6_tefeu")]
