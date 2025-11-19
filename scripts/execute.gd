@@ -1,8 +1,5 @@
 extends Node2D
 
-
-
-
 var flags = {
 		"zero" : false,
 		"carry" : false
@@ -14,7 +11,7 @@ var ldi_mapping = {
 	"clear_pixel": 243,
 	"load_pixel": 244,
 	"buffer_screen": 245,
-	"clear_buffer_screen": 246,
+	"clear_screen_buffer": 246,
 	"write_char": 247,
 	"buffer_chars": 248,
 	"clear_chars_buffer": 249,
@@ -25,6 +22,43 @@ var ldi_mapping = {
 	"rng": 254,
 	"controller_input": 255
 }
+
+var char_mapping = {
+	'"' : 0,
+	'"A"' : 1,
+	'"B"' : 2,
+	'"C"' : 3,
+	'"D"' : 4,
+	'"E"' : 5,
+	'"F"' : 6,
+	'"G"' : 7,
+	'"H"' : 8,
+	'"I"' : 9,
+	'"J"' : 10,
+	'"K"' : 11,
+	'"L"' : 12,
+	'"M"' : 13,
+	'"N"' : 14,
+	'"O"' : 15,
+	'"P"' : 16,
+	'"Q"' : 17,
+	'"R"' : 18,
+	'"S"' : 19,
+	'"T"' : 20,
+	'"U"' : 21,
+	'"V"' : 22,
+	'"W"' : 23,
+	'"X"' : 24,
+	'"Y"' : 25,
+	'"Z"' : 26,
+	'"."' : 27,
+	'"!"' : 28,
+	'"?"' : 29
+}
+
+var machine_code
+var lines
+var step
 
 func update_flags(value):
 	if value & 0xFF == 0:
@@ -40,12 +74,13 @@ func update_flags(value):
 func _ready() -> void:
 	globals.start.connect(_start)
 	globals.stop.connect(_stop)
+	globals.reset_step.connect(_reset)
 
 func _start():
 	
-	var machine_code = globals.machine_code
+	machine_code = globals.machine_code
 	
-	var lines = machine_code.split("\n")
+	lines = machine_code.split("\n")
 	
 	var labels = {}
 	for i in range(lines.size()):
@@ -53,15 +88,17 @@ func _start():
 		if l.begins_with("."):
 			labels[l] = i
 	
-	var step = 0
+	step = 0
 	while step < lines.size():
-		globals.step = step
 		$Delta.start()
 		var line = lines[step]
 		print(line)
 		var command = "NOP"
+		while line.begins_with(" ") or line.begins_with("	"):
+			line = line.substr(1)
 		if not line == "":
-			command = line.split(" ")[0]
+			command = line.split(" ")[0].to_upper()
+		
 		if command == "LDI":
 			var register_adress = int(line.split(" ")[1].substr(1))
 			var register_data_str = line.split(" ")[2]
@@ -71,6 +108,8 @@ func _start():
 			else:
 				if ldi_mapping.has(register_data_str):
 					register_data = ldi_mapping[register_data_str]
+				elif char_mapping.has(register_data_str):
+					register_data = char_mapping[register_data_str]
 				else:
 					print("ParserError at line "+str(step)+" : '"+line+"'. Constant '"+register_data_str+"' isn't defined.")
 					break
@@ -279,4 +318,12 @@ func _start():
 	globals.running = false
 
 func _stop():
-	pass
+	var jump_to_step = lines.size()
+	step = jump_to_step
+
+func _reset():
+	step = 0
+
+func _process(_delta):
+	if step != null:
+		globals.step = step

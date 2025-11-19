@@ -19,7 +19,7 @@ offset_right = 800.0
 offset_bottom = 35.0
 scale = Vector2(17, 17)
 texture_normal = ExtResource("1_yev5y")
-texture_pressed = ExtResource("1_yev5y")
+texture_pressed = ExtResource("4_8dubc")
 ignore_texture_size = true
 stretch_mode = 1
 
@@ -350,3 +350,4 @@ vertical_alignment = 1
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Import" to="." method="_on_import_pressed"]
 [connection signal="pressed" from="Export" to="." method="_on_export_pressed"]
+[connection signal="pressed" from="Reset" to="." method="_on_reset_pressed"]

@@ -179,9 +179,12 @@ func _export_with_python(format: String):
 
 func _on_start_pressed() -> void:
 	if not globals.running:
-		globals.emit_signal("start")
-		globals.running = true
 		globals.machine_code = $Code.text
+		globals.running = true
+		globals.emit_signal("start")
 	else:
 		globals.emit_signal("stop")
 		globals.running = false
+
+func _on_reset_pressed() -> void:
+	globals.reset()
