@@ -2,7 +2,7 @@ LDI r1 13
 LDI r2 18
 LDI r3 1
 LDI r4 1
-LDI r5 32
+LDI r5 31
 LDI r15 pixel_x
 
 .loop
@@ -38,3 +38,4 @@ STR r15 r1
 STR r15 r2 1
 STR r15 r0 2
 STR r15 r0 5
+RET

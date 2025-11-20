@@ -74,17 +74,17 @@ func _on_export_pressed() -> void:
 	
 	var btn_as := Button.new()
 	btn_as.text = "Assembly File (.as)"
-	btn_as.pressed.connect(Callable(self, "_export_as"))
+	btn_as.pressed.connect(_export_as)
 	vb.add_child(btn_as)
 	
 	var btn_mc := Button.new()
 	btn_mc.text = "Binary Code (.mc)"
-	btn_mc.pressed.connect(Callable(self, "_export_mc"))
+	btn_mc.pressed.connect(_export_mc)
 	vb.add_child(btn_mc)
 	
 	var btn_sch := Button.new()
 	btn_sch.text = "Minecraft Schematic (.schematic)"
-	btn_sch.pressed.connect(Callable(self, "_export_schem"))
+	btn_sch.pressed.connect(_export_schem)
 	vb.add_child(btn_sch)
 	
 
@@ -107,7 +107,8 @@ func _dir_selected(path):
 	else:
 		push_error("Cannot find file at : " + path)
 	
-func export_as():
+func _export_as():
+	print("a")
 	var fd = FileDialog.new()
 	add_child(fd)
 	fd.access = FileDialog.ACCESS_FILESYSTEM
